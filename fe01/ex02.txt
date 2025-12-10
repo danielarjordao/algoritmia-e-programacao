@@ -1,0 +1,18 @@
+INÍCIO → Retângulo arredondado
+
+Ler horas → Paralelogramo
+
+Ler minutos → Paralelogramo
+
+Ler segundos → Paralelogramo
+
+totalSegundos ← (horas × 3600) + (minutos × 60) + segundos → Retângulo
+
+Escrever "Total em segundos: ", totalSegundos → Paralelogramo
+
+FIM → Retângulo arredondado
+
+Legenda:
+- Retângulo arredondado: Início/Fim
+- Paralelogramo: Entrada/Saída
+- Retângulo: Processamento

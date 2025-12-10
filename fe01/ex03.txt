@@ -1,0 +1,16 @@
+INÍCIO → Retângulo arredondado
+
+Ler litros consumidos → Paralelogramo
+
+Ler quilómetros percorridos → Paralelogramo
+
+consumo ← (litros × 100) / quilómetros → Retângulo
+
+Escrever "Consumo aos 100 km: ", consumo, " L/100km" → Paralelogramo
+
+FIM → Retângulo arredondado
+
+Legenda:
+- Retângulo arredondado: Início/Fim
+- Paralelogramo: Entrada/Saída
+- Retângulo: Processamento
