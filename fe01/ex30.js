@@ -6,6 +6,12 @@
 // ** Potenciação
 // % Resto da divisão
 
+// ORDEM DE PRECEDÊNCIA (maior para menor):
+// 1. Parênteses ()
+// 2. Potenciação **
+// 3. Multiplicação * e Divisão /
+// 4. Adição + e Subtração -
+
 // 1) 2 + 3 * 4
 // Multiplicação (*) tem precedência sobre adição (+)
 // Cálculo: 2 + (3 * 4) = 2 + 12 = 14
@@ -29,9 +35,3 @@ console.log(`3) 10 - 2 ** 2 = ${resultado3}`);
 // Cálculo: (10 - 2) ** 2 = 8 ** 2 = 64
 let resultado4 = (10 - 2) ** 2;
 console.log(`4) (10 - 2) ** 2 = ${resultado4}`);
-
-// ORDEM DE PRECEDÊNCIA (maior para menor):
-// 1. Parênteses ()
-// 2. Potenciação **
-// 3. Multiplicação * e Divisão /
-// 4. Adição + e Subtração -

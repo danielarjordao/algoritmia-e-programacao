@@ -11,12 +11,15 @@ let fator = 1 + (taxaMensal / 100);
 // Calcular o montante acumulado
 let montante = 0;
 
-for (let mes = 1; mes <= numeroMeses; mes++) {
-    // Depositar no início do mês
-    montante = montante + depositoMensal;
-    // Aplicar juros ao final do mês
-    montante = montante * fator;
-}
+// Utilizar o método Math.pow para calcular o montante acumulado sem loop
+// Fórmula do montante acumulado com depósitos mensais e capitalização composta:
+// M = P * [((1 + r)^n - 1) / r]
+// Onde:
+// M = montante acumulado
+// P = depósito mensal
+// r = taxa mensal (em decimal)
+// n = número de meses
+montante = depositoMensal * ((Math.pow(fator, numeroMeses) - 1) / (fator - 1));
 
 // Apresentar o resultado
 console.log(`Montante acumulado: ${montante.toFixed(2)}`);
