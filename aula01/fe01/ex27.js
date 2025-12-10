@@ -19,7 +19,7 @@ let montante = 0;
 // P = depósito mensal
 // r = taxa mensal (em decimal)
 // n = número de meses
-montante = depositoMensal * ((Math.pow(fator, numeroMeses) - 1) / (fator - 1));
+montante = depositoMensal * (fator ** numeroMeses - 1) / (fator - 1);
 
 // Apresentar o resultado
 console.log(`Montante acumulado: ${montante.toFixed(2)}`);
