@@ -56,3 +56,25 @@ if (condição1) {
 } else {
 	// bloco de código se nenhuma condição for verdadeira
 }
+```
+
+# Switch case
+
+O `switch` é uma estrutura de controle que permite selecionar entre múltiplas opções com base no valor de uma expressão.
+
+## Estrutura básica
+```javascript
+switch (expressão) {
+	case valor1:
+		// bloco de código para valor1
+		break;
+	case valor2:
+		// bloco de código para valor2
+		break;
+	// mais casos...
+	default:
+		// bloco de código se nenhum caso corresponder
+}
+```
+
+

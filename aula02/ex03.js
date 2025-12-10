@@ -1,4 +1,4 @@
-// Escreva um algorítmo capaz de ler um número inteiro, que lhe incremente 1 no caso deste ser devisível por 3.
+// Escreva um algoritmo capaz de ler um número inteiro, que lhe incremente 1 no caso deste ser devisível por 3.
 
 const prompt = require("prompt-sync")();
 

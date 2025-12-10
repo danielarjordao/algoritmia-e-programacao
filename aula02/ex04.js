@@ -1,4 +1,4 @@
-// Escreva um algorítmo capaz de ler um número inteiro e verificar se este é par ou impar.
+// Escreva um algoritmo capaz de ler um número inteiro e verificar se este é par ou impar.
 
 const prompt = require("prompt-sync")();
 

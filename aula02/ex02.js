@@ -1,4 +1,4 @@
-// Implemente um algorítmo que leia o salário mensal de um trabalhador
+// Implemente um algoritmo que leia o salário mensal de um trabalhador
 // e determine se ele tem direito a receber o apoio estatal para compensar o aumento dos preços.
 
 const prompt = require("prompt-sync")();
