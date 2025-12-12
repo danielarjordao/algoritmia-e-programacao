@@ -1,14 +1,27 @@
 const prompt = require("prompt-sync")();
 
-let contador = 0;
-let contadorPares = 0;
+let n = 0;
+let soma = 0;
+let maiorTemperatura = -99999;
 
-do {
-	const num = Number(prompt("Digite um número: "));
-	if ((num % 2) === 0) {
-		contadorPares++;
+let continuar = prompt("Bem vindo! Vamos Lançar temperaturas? S | N ").toLocaleLowerCase === "s";
+
+while (continuar) {
+	const temperatura = Number(prompt("Temperatura: "));
+	soma += temperatura;
+	n++;
+
+	if (maiorTemperatura < temperatura) {
+		maiorTemperatura = temperatura;
 	}
-	contador++;
-} while (contador < 10);
 
-console.log(`Você digitou ${contadorPares} números pares.`);
+	continuar = prompt("Continuar? S | N: ").toLowerCase() === "s";
+}
+
+if (n === 0) {
+	console.log("Não foram lançados dados!");
+} else {
+	let media = soma / n;
+	console.log(`A média de temperaturas é ${media}.`);
+	console.log(`A maior temperatura é ${maiorTemperatura}.`)
+}
