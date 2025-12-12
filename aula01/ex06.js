@@ -1,3 +1,12 @@
+// • Elabora um programa que peça ao
+// utilizador três números inteiros, calcule
+// a média e apresente o resultado
+// formatado com duas casas decimais.
+// • Deve ainda incluir uma mensagem
+// inicial no ecrã e aguardar que o
+// utilizador pressione ENTER para
+// terminar o programa.
+
 /*
 Pseudocódigo
 

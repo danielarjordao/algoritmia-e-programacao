@@ -1,3 +1,8 @@
+
+// Cria um programa que declare duas
+// variáveis inteiras, lhes atribua valores e
+// calcule a sua soma.
+
 // Importa o módulo prompt-sync para entrada de dados
 const prompt = require("prompt-sync")();
 

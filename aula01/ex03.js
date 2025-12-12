@@ -1,3 +1,9 @@
+// Desenvolve um programa que utilize
+// duas variáveis do tipo real, atribua
+// valores e calcule a divisão do primeiro
+// número pelo segundo.
+// • Apresenta o resultado com três casas
+// decimais.
 const prompt = require("prompt-sync")();
 
 let num1 = Number(prompt("Digite o primeiro número: "));

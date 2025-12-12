@@ -108,7 +108,6 @@
 
 - JavaScript Source Code → Parser → Abstract Syntax Tree (AST) → Interpreter (Ignition) → Bytecode → Compiler (TurboFan) → Optimized Machine Code → Execution
 
-
 ## Representação de um algoritmo - linguagem natural
 
 - A representação de um algoritmo em linguagem natural envolve descrever os passos necessários para resolver um problema ou realizar uma tarefa utilizando frases e termos comuns do dia a dia. Essa abordagem é útil para comunicar a lógica do algoritmo a pessoas que podem não estar familiarizadas com linguagens de programação ou notações formais.
