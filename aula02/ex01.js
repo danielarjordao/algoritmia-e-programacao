@@ -1,19 +1,24 @@
-// Algorítimo "Maior de idade"
+let a = 3, b = 7, c = 4;
+let resultado;
 
-const prompt = require("prompt-sync")();
+console.log(`Valores: a = ${a}, b = ${b}, c = ${c}`);
 
-// Lê o nome e idade de uma pessoa
-let nome = prompt("Digite o nome: ");
-let idade = Number(prompt("Digite a idade: "));
+// 1.
+resultado = (a + b) > b;
+console.log(`(a + b) > b: ${resultado}`);
 
-// Considera a maioridade aos 18 anos
-const maioridade = 18;
+// 2.
+resultado = b >= (a + 2);
+console.log(`b >= (a + 2): ${resultado}`);
 
-// Determina se a pessoa é maior de idade
-let maiorDeIdade = idade >= maioridade;
+// 3.
+resultado = c === b - a;
+console.log(`c === b - a: ${resultado}`);
 
-// Apresenta o resultado
-console.log(`${nome} é maior de idade? ${maiorDeIdade}`);
+// 4.
+resultado = (b + a) <= c;
+console.log(`(b + a) <= c: ${resultado}`);
 
-// Prima enter para terminar
-prompt("Prima Enter para terminar...");
+// 5.
+resultado = (c + a) > b;
+console.log(`(c + a) > b: ${resultado}`);

@@ -1,16 +1,19 @@
-// Implemente um algoritmo que leia o salário mensal de um trabalhador
-// e determine se ele tem direito a receber o apoio estatal para compensar o aumento dos preços.
+// Algorítimo "Maior de idade"
 
 const prompt = require("prompt-sync")();
 
-// Ler o salário mensal
-let salarioMensal = Number(prompt("Digite o salário mensal do trabalhador: "));
+// Lê o nome e idade de uma pessoa
+let nome = prompt("Digite o nome: ");
+let idade = Number(prompt("Digite a idade: "));
 
-// Determinar se tem direito ao apoio estatal
-const limite = 1000;
+// Considera a maioridade aos 18 anos
+const maioridade = 18;
 
-// Utilize um operador relacional (<=) para comparar o salário mensal com o limite
-let temDireitoApoio = salarioMensal <= limite;
+// Determina se a pessoa é maior de idade
+let maiorDeIdade = idade >= maioridade;
 
-// Apresentar o resultado
-console.log(`Tem direito ao apoio estatal: ${temDireitoApoio}`);
+// Apresenta o resultado
+console.log(`${nome} é maior de idade? ${maiorDeIdade}`);
+
+// Prima enter para terminar
+prompt("Prima Enter para terminar...");
