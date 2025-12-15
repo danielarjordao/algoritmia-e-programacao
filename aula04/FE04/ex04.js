@@ -9,7 +9,7 @@ function imprimeNumeros(numero) {
 	}
 }
 
-function lerNumeroPositivos(mensagem) {
+function lerNumerosPositivos(mensagem) {
 	let num;
 	do {
 		num = Number(prompt(mensagem));
@@ -17,5 +17,5 @@ function lerNumeroPositivos(mensagem) {
 	return num;
 }
 
-const num = lerNumeroPositivos("Digite um número inteiro positivo: ");
+const num = lerNumerosPositivos("Digite um número inteiro positivo: ");
 imprimeNumeros(num);

@@ -5,7 +5,7 @@
 
 const prompt = require("prompt-sync")();
 
-const numero = lerNumero("Digite um número: ");
+const numero = lerNumerosPositivos("Digite um número: ");
 
 if (verificaPrimo(numero)) {
 	console.log(`O número ${numero} é primo.`);
@@ -13,11 +13,11 @@ if (verificaPrimo(numero)) {
 	console.log(`O número ${numero} não é primo.`);
 }
 
-function lerNumero(mensagem) {
+function lerNumerosPositivos(mensagem) {
 	let num;
 	do {
 		num = Number(prompt(mensagem));
-	} while (isNaN(num) || num < 0);
+	} while (isNaN(num) || num <= 0);
 	return num;
 }
 

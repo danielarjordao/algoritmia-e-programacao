@@ -11,18 +11,18 @@
 
 const prompt = require("prompt-sync")();
 
-const inicio = lerNumero("Digite o número inicial do intervalo: ");
-const fim = lerNumero("Digite o número final do intervalo: ");
+const inicio = lerNumerosPositivos("Digite o número inicial do intervalo: ");
+const fim = lerNumerosPositivos("Digite o número final do intervalo: ");
 
 for (let num = inicio; num <= fim; num++) {
 	mostra(num, verificaPrimo(num));
 }
 
-function lerNumero(mensagem) {
+function lerNumerosPositivos(mensagem) {
 	let num;
 	do {
 		num = Number(prompt(mensagem));
-	} while (isNaN(num) || num < 0);
+	} while (isNaN(num) || num <= 0);
 	return num;
 }
 
