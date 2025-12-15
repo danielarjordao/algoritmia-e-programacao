@@ -4,17 +4,11 @@
 
 const prompt = require("prompt-sync")();
 
-let somaNumeros = 0;
 const NUM1 = lerNumero("Digite o primeiro número: ");
-somaNumeros = soma(somaNumeros, NUM1);
 const NUM2 = lerNumero("Digite o segundo número: ");
-somaNumeros = soma(somaNumeros, NUM2);
 const NUM3 = lerNumero("Digite o terceiro número: ");
-somaNumeros = soma(somaNumeros, NUM3);
 
-const DIVISOR = 3;
-
-const resultado = divisao(somaNumeros, DIVISOR);
+const resultado = media(NUM1, NUM2, NUM3);
 console.log(`A média de ${NUM1}, ${NUM2} e ${NUM3} é: ${resultado}`);
 
 function lerNumero(mensagem) {
@@ -34,4 +28,9 @@ function divisao(dividendo, divisor) {
 		return 0;
 	}
 	return dividendo / divisor;
+}
+
+function media(n1, n2, n3) {
+	const somaTotal = soma(soma(n1, n2), n3);
+	return divisao(somaTotal, 3);
 }
