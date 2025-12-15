@@ -23,7 +23,7 @@ while (prompt("Deseja inserir uma temperatura em graus Celsius (s/n)? ").toLower
 	totalKelvin += tempK;
 	if (tempK < minTempK)
 		minTempK = tempK;
-	if (tempK > maxTempK)
+	else if (tempK > maxTempK)
 		maxTempK = tempK;
 	count++;
 }
