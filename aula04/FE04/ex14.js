@@ -13,8 +13,7 @@ function lerNumerosPositivos(mensagem) {
 	do {
 		num = Number(prompt(mensagem));
 	} while (isNaN(num) || num < 0);
-	num = Math.trunc(num);
-	return num;
+	return Math.trunc(num);
 }
 
 function inverteNumero(numero) {

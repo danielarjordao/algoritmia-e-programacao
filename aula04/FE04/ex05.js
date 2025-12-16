@@ -42,7 +42,7 @@ function lerNumero(mensagem) {
 	do {
 		num = Number(prompt(mensagem));
 	} while (isNaN(num));
-	return num;
+	return Math.trunc(num);
 }
 
 function kelvinToCelsius(tempK) {

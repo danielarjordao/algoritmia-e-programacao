@@ -14,7 +14,7 @@ function lerNumeros(mensagem) {
 	do {
 		num = Number(prompt(mensagem));
 	} while (isNaN(num));
-	return num;
+	return Math.trunc(num);
 }
 
 function lerNumerosPositivos(mensagem) {
@@ -22,7 +22,7 @@ function lerNumerosPositivos(mensagem) {
 	do {
 		num = Number(prompt(mensagem));
 	} while (isNaN(num) || num < 0);
-	return num;
+	return Math.trunc(num);
 }
 
 function potencia(base, expoente) {

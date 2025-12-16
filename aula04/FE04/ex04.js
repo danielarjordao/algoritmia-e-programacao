@@ -14,7 +14,7 @@ function lerNumerosPositivos(mensagem) {
 	do {
 		num = Number(prompt(mensagem));
 	} while (isNaN(num) || num <= 0);
-	return num;
+	return Math.trunc(num);
 }
 
 const num = lerNumerosPositivos("Digite um número inteiro positivo: ");
