@@ -12,4 +12,21 @@
 
 // Apresente uma solução para o problema.
 
-// TO_DO
+const prompt = require('prompt-sync')();
+
+const idade = Number(prompt("Digite a idade do atleta: "));
+
+if (isNaN(idade) || idade <= 0) {
+	console.log("Erro: Idade inválida.");
+} else if (idade >= 11 && idade <= 15) {
+	console.log("Categoria: Juvenil");
+	if (idade === 11 || idade === 12) {
+		console.log("Parabéns! A taxa de inscrição é gratuita para você.");
+	}
+} else if (idade >= 16 && idade <= 20) {
+	console.log("Categoria: Junior");
+} else if (idade >= 21 && idade <= 25) {
+	console.log("Categoria: Profissional");
+} else {
+	console.log("Idade fora das categorias disponíveis.");
+}

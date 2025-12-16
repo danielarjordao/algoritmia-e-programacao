@@ -3,4 +3,20 @@
 // respectivamente, as mensagens: Ligar, Desligar e Furar. No caso da letra
 // digitada ser outra é apresentada uma mensagem de erro.
 
-// TO_DO
+const prompt = require('prompt-sync')();
+
+const operacao = prompt("Digite a operação (L para Ligar, D para Desligar, F para Furar): ").toUpperCase();
+
+switch (operacao) {
+	case 'L':
+		console.log("Ligar");
+		break;
+	case 'D':
+		console.log("Desligar");
+		break;
+	case 'F':
+		console.log("Furar");
+		break;
+	default:
+		console.log("Erro: Operação inválida.");
+}
