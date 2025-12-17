@@ -10,21 +10,29 @@
 
 const prompt = require('prompt-sync')();
 
-console.log("Escolha uma opção:");
-console.log("1 - Cifrar um número de 4 dígitos");
-console.log("2 - Decifrar um número de 4 dígitos");
-const escolha = prompt("Opção (1 ou 2): ");
+let escolha;
+
+do {
+	console.log("Escolha uma opção:");
+	console.log("1 - Cifrar um número de 4 dígitos");
+	console.log("2 - Decifrar um número de 4 dígitos");
+	console.log("3 - Sair");
+	escolha = Number(prompt("Opção: "));
+} while ( escolha < 1 || escolha > 3 );
 
 switch (escolha) {
-	case '1':
+	case 1:
 		const numParaCifrar = lerNumeroDe4Digitos("Digite um número de 4 dígitos para cifrar: ");
 		const numeroCifrado = cifrarNumero(numParaCifrar);
 		console.log(`Número cifrado: ${numeroCifrado}`);
 		break;
-	case '2':
+	case 2:
 		const numParaDecifrar = lerNumeroDe4Digitos("Digite um número de 4 dígitos para decifrar: ");
 		const numeroDecifrado = decifrarNumero(numParaDecifrar);
 		console.log(`Número decifrado: ${numeroDecifrado}`);
+		break;
+	case 3:
+		console.log("Sair");
 		break;
 	default:
 		console.log("Opção inválida.");
@@ -34,7 +42,7 @@ function lerNumeroDe4Digitos(mensagem) {
 	let num;
 	do {
 		num = Number(prompt(mensagem));
-	} while (isNaN(num) || num < 1000 || num > 9999);
+	} while (isNaN(num) || num < 0 || num > 9999);
 	return Math.trunc(num);
 }
 
@@ -52,13 +60,11 @@ function inverteNumero(numero) {
 function cifrarNumero(numero) {
 	let numeroInvertido = inverteNumero(numero);
 	let numeroCifrado = 0;
-	let multiplicador = 1;
 
 	for (let i = 0; i < 4; i++) {
 		const digito = numeroInvertido % 10;
 		const digitoCifrado = (digito + 8) % 10;
-		numeroCifrado += digitoCifrado * multiplicador;
-		multiplicador *= 10;
+		numeroCifrado = (numeroCifrado * 10) + digitoCifrado;
 		numeroInvertido = Math.trunc(numeroInvertido / 10);
 	}
 	return numeroCifrado;
@@ -67,13 +73,11 @@ function cifrarNumero(numero) {
 function decifrarNumero(numero) {
 	let numeroInvertido = inverteNumero(numero);
 	let numeroDecifrado = 0;
-	let multiplicador = 1;
 
 	for (let i = 0; i < 4; i++) {
 		const digito = numeroInvertido % 10;
-		const digitoDecifrado = (digito + 2) % 10; // (digito - 8 + 10) mod 10
-		numeroDecifrado += digitoDecifrado * multiplicador;
-		multiplicador *= 10;
+		const digitoDecifrado = (digito + 2) % 10;
+		numeroDecifrado = (numeroDecifrado * 10) + digitoDecifrado;
 		numeroInvertido = Math.trunc(numeroInvertido / 10);
 	}
 	return numeroDecifrado;
