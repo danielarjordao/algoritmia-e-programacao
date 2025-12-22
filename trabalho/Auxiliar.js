@@ -37,31 +37,23 @@ function lerNumeroPositivo(mensagem) {
 	return numero;
 }
 
+function lerOpcao(mensagem, min, max) {
+	let opcao;
+	do {
+		opcao = lerNumero(mensagem);
+		if (opcao < min || opcao > max) {
+			console.log(`Opção inválida. Digite um número entre ${min} e ${max}.`);
+		}
+	} while (opcao < min || opcao > max);
+	return opcao;
+}
+
 function continuarOperacao(mensagem) {
 	let resposta;
 	do {
 		resposta = prompt(mensagem).toLowerCase();
 	} while (resposta !== "s" && resposta !== "n");
 	return resposta === "s";
-}
-
-function solicitarMenu(array, mensagem) {
-	let opcao;
-	do {
-		printMenu(mensagem, array);
-		opcao = lerNumero("Escolha uma opção: ");
-		if (opcao < 1 || opcao > array.length) {
-			console.log(`Opção inválida. Digite um número entre 1 e ${array.length}.`);
-		}
-	} while (opcao < 1 || opcao > array.length);
-	return array[opcao - 1];
-}
-
-function printMenu(titulo, opcoes) {
-	console.log("\n" + titulo);
-	for (let i = 0; i < opcoes.length; i++) {
-		console.log(`${i + 1}. ${opcoes[i]}`);
-	}
 }
 
 function lerData(mensagem) {
@@ -74,7 +66,7 @@ function lerData(mensagem) {
 			const dia = Number(partes[0]);
 			const mes = Number(partes[1]);
 			const ano = Number(partes[2]);
-			if (!isNaN(dia) && !isNaN(mes) && !isNaN(ano)) {
+			if (!isNaN(dia) && !isNaN(mes) && !isNaN(ano) && partes[2].length === 4) {
 				// Em JavaScript os meses são baseados em zero (0-11)
 				data = new Date(ano, mes - 1, dia);
 				// Verifica se a data criada corresponde à data inserida
@@ -87,7 +79,7 @@ function lerData(mensagem) {
 					console.log("Data inválida. Por favor, digite uma data válida no formato dd/mm/aaaa.");
 				}
 			} else {
-				console.log("Formato inválido. Use números no formato dd/mm/aaaa.");
+				console.log("Formato inválido. Use números no formato dd/mm/aaaa (ano com 4 dígitos).");
 			}
 		} else {
 			console.log("Formato inválido. Use o formato dd/mm/aaaa.");
@@ -110,15 +102,76 @@ function calcularAnosEntreDatas(dataInicio, dataFim) {
 	return anos;
 }
 
+function selecionarDaLista(lista, mensagem, campoExibicao = 'nome') {
+	if (lista.length === 0) {
+		console.log("Nenhum item disponível para seleção.");
+		return null;
+	}
+
+	console.log("\n" + mensagem);
+	for (let i = 0; i < lista.length; i++) {
+		let exibicao;
+		if (lista[i].tipo) {
+			// Segurado: mostrar tipo e identificação apropriada
+			if (lista[i].tipo === "Pessoa") {
+				exibicao = lista[i].nome;
+			} else {
+				exibicao = lista[i].descricao;
+			}
+			exibicao = `[${lista[i].tipo}] ${exibicao}`;
+		} else if (lista[i].tomadorId !== undefined && lista[i].valorSegurado !== undefined) {
+			// Apólice: mostrar ID e valor segurado
+			exibicao = `Apólice ID ${lista[i].id} - €${lista[i].valorSegurado.toFixed(2)}`;
+		} else {
+			exibicao = lista[i][campoExibicao];
+		}
+		console.log(`${i + 1}. ${exibicao}`);
+	}
+
+	const opcao = lerOpcao("Escolha uma opção: ", 1, lista.length);
+	return lista[opcao - 1].id;
+}
+
+function selecionarOuCriar(array, tipo, ClasseConstrutora) {
+	console.log("");
+	if (array.length > 0) {
+		console.log(`${tipo}:`);
+		console.log("1. Usar existente");
+		console.log("2. Criar novo");
+		const opcao = lerOpcao("Escolha uma opcao: ", 1, 2);
+		if (opcao === 1) {
+			return selecionarDaLista(array, `Selecione o ${tipo.toLowerCase()}:`);
+		}
+		console.log("");
+	}
+
+	// Criar novo
+	const novo = new ClasseConstrutora();
+	array.push(novo);
+	let identificacao;
+	if (novo.tipo) {
+		if (novo.tipo === "Pessoa") {
+			identificacao = novo.nome;
+		} else {
+			identificacao = novo.descricao;
+		}
+	} else {
+		identificacao = novo.nome;
+	}
+	console.log(`${tipo} "${identificacao}" criado com sucesso!`);
+	return novo.id;
+}
+
 export default {
 	imprimirArray,
 	promptMensagem,
 	lerNumero,
 	lerNumeroPositivo,
+	lerOpcao,
 	continuarOperacao,
-	solicitarMenu,
-	printMenu,
 	obterDataAtual,
 	lerData,
-	calcularAnosEntreDatas
+	calcularAnosEntreDatas,
+	selecionarDaLista,
+	selecionarOuCriar
 };

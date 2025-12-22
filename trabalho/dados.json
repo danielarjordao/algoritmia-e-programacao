@@ -1,0 +1,75 @@
+{
+  "seguradoras": [
+    {
+      "id": 1,
+      "nome": "Seguradora A"
+    },
+    {
+      "id": 2,
+      "nome": "Seguradora B"
+    }
+  ],
+  "tomadores": [
+    {
+      "id": 1,
+      "nome": "Tomador A",
+      "dataDeNascimento": "1993-03-18T00:00:00.000Z",
+      "idade": 32,
+      "morada": "A",
+      "contacto": "A"
+    },
+    {
+      "id": 2,
+      "nome": "Tomador B",
+      "dataDeNascimento": "1993-03-18T00:00:00.000Z",
+      "idade": 32,
+      "morada": "B",
+      "contacto": "B"
+    }
+  ],
+  "segurados": [
+    {
+      "id": 1,
+      "tipo": "Pessoa",
+      "nome": "Segurado A",
+      "dataDeNascimento": "1993-03-18T00:00:00.000Z",
+      "idade": 32,
+      "morada": "A",
+      "contacto": "A"
+    },
+    {
+      "id": 2,
+      "tipo": "Bem",
+      "descricao": "Segurado B",
+      "localizacao": "B"
+    }
+  ],
+  "apolices": [
+    {
+      "id": 1,
+      "seguradoraId": 1,
+      "tomadorId": 1,
+      "seguradoId": 1,
+      "tipoDeSeguroId": 1,
+      "valorSegurado": 10000000,
+      "periodicidadePremioId": 2,
+      "valorPremio": 1000,
+      "estadoDaApoliceId": 1
+    },
+    {
+      "id": 2,
+      "seguradoraId": 2,
+      "tomadorId": 2,
+      "seguradoId": 2,
+      "tipoDeSeguroId": 4,
+      "valorSegurado": 1000000,
+      "periodicidadePremioId": 1,
+      "valorPremio": 100,
+      "estadoDaApoliceId": 1
+    }
+  ],
+  "proximoIdSeguradora": 4,
+  "proximoIdTomador": 4,
+  "proximoIdSegurado": 4,
+  "proximoIdApolice": 4
+}
