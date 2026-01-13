@@ -1,4 +1,4 @@
-class aluno {
+class Aluno {
 	constructor(id, nome, nota) {
 		this.id = id;
 		this.nome = nome;
@@ -8,6 +8,6 @@ class aluno {
 	aprovado() {
 		return this.nota >= 10;
 	}
-};
+}
 
-export default aluno;
+export default Aluno;

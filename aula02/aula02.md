@@ -5,7 +5,7 @@ Operadores relacionais são usados para comparar dois valores e retornar um valo
 ## Tabela de Operadores
 
 | Operador | Descrição                  | Exemplo      | Resultado |
-|----------|----------------------------|--------------|-----------||
+|----------|----------------------------|--------------|-----------|
 | `<`      | Menor que                  | `3 < 5`      | `true`    |
 | `>`      | Maior que                  | `5 > 3`      | `true`    |
 | `<=`     | Menor ou igual a           | `3 <= 5`     | `true`    |
@@ -30,7 +30,7 @@ Operadores lógicos são usados para combinar expressões booleanas e retornar u
 ## Tabela de Operadores
 
 | Operador   | Descrição          | Exemplo         | Resultado |
-|------------|--------------------|-----------------|-----------||
+|------------|--------------------|-----------------| ----------|
 | `&&`       | E lógico (AND)     | `true && false` | `false`   |
 | `||`       | OU lógico (OR)     | `true || false` | `true`    |
 | `!`        | Negação lógica (NOT) | `!true`       | `false`   |

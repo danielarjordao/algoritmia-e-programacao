@@ -1,4 +1,4 @@
-// Implemente um programa em de acordo com dois lados de um quadrado/retângulo
+// Implemente um programa de acordo com dois lados de um quadrado/retângulo
 // e no final indique ao utilizador a área e se a figura geométrica é um quadrado ou um retângulo
 
 const prompt = require("prompt-sync")();
@@ -8,8 +8,13 @@ let num2 = Number(prompt("Digite o segundo lado: "));
 
 if (num1 <= 0 || num2 <= 0 || isNaN(num1) || isNaN(num2)) {
 	console.log("Valor inválido.");
-} else if (num1 === num2) {
-	console.log("A figura é um quadrado.");
-} else if (num1 !== num2) {
-	console.log("A figura é um retângulo.");
+} else {
+	let area = num1 * num2;
+	console.log(`Área: ${area}`);
+	
+	if (num1 === num2) {
+		console.log("A figura é um quadrado.");
+	} else {
+		console.log("A figura é um retângulo.");
+	}
 }

@@ -1,5 +1,19 @@
 {
-  "type": "module",
+  "name": "algoritmia-e-programacao",
+  "version": "1.0.0",
+  "description": "Material didático de Algoritmia e Programação com JavaScript",
+  "scripts": {
+    "test": "echo \"Material educacional - sem testes automatizados\" && exit 0"
+  },
+  "keywords": [
+    "javascript",
+    "algoritmos",
+    "educacao",
+    "programacao",
+    "estruturas-de-dados"
+  ],
+  "author": "",
+  "license": "MIT",
   "dependencies": {
     "prompt-sync": "^4.2.0"
   }

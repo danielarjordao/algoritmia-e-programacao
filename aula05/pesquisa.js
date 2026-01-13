@@ -2,16 +2,22 @@ const prompt = require('prompt-sync')();
 
 let numeros = [];
 
+// Ler até 10 números ou até digitar "sair"
 do {
-	let num = Number(prompt("Digite um número (ou digite sair para encerrar): "));
-	if (isNaN(num)) {
-		if (num.toLowerCase() === "sair") {
-			break;
-		} else {
-			console.log("Entrada inválida. Por favor, digite um número ou 'sair'.");
-			continue;
-		}
+	let entrada = prompt("Digite um número (ou digite 'sair' para encerrar): ");
+	
+	// Verificar se o usuário quer sair
+	if (entrada.toLowerCase() === "sair") {
+		break;
 	}
+	
+	let num = Number(entrada);
+	
+	if (isNaN(num)) {
+		console.log("Entrada inválida. Por favor, digite um número ou 'sair'.");
+		continue;
+	}
+	
 	numeros.push(num);
 } while (numeros.length < 10);
 

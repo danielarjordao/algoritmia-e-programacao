@@ -51,8 +51,5 @@ console.log(`${num1} / ${num2} = ${div.toFixed(2)}`);
 
 let rest = num1 % num2;
 console.log(`${num1} % ${num2} = ${rest.toFixed(2)}`);
-
-console.log(`${num1} % ${num2} = ${rest.toFixed(2)}`);
-
 prompt("");
 
