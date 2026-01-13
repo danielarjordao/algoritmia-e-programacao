@@ -14,37 +14,45 @@ Este repositório contém material introdutório para o ensino de:
 
 ```
 algoritmia-e-programacao/
-├── aula01/          # Introdução à Algoritmia e JavaScript
-│   ├── aula01.md   # Teoria: algoritmos, variáveis, operadores
-│   ├── ex01-07.js  # Exercícios básicos
-│   └── FE01/       # Ficha de exercícios 01
-├── aula02/          # Operadores e Estruturas Condicionais
-│   ├── aula02.md   # Teoria: operadores relacionais, lógicos, if/switch
-│   └── ex01-11.js  # Exercícios de condicionais
-├── aula03/          # Estruturas de Repetição
-│   ├── aula03.md   # Teoria: while, do-while, for, for...in, for...of
-│   ├── ex01-05.js  # Exercícios de loops
-│   ├── FE02/       # Ficha de exercícios 02
-│   └── FE03/       # Ficha de exercícios 03
-├── aula04/          # Funções
-│   ├── aula04.md   # Teoria: funções, parâmetros, callbacks
-│   ├── callback.js # Exemplo de callbacks
-│   ├── ex01-07.js  # Exercícios de funções
-│   └── FE04/       # Ficha de exercícios 04
-├── aula05/          # Arrays
-│   ├── aula05.md   # Teoria: arrays, pesquisa, ordenação
-│   ├── array.js    # Exemplos de arrays
-│   ├── pesquisa.js # Algoritmos de pesquisa
-│   ├── ordenacao.js # Algoritmos de ordenação
-│   └── ex01-03.js  # Exercícios de arrays
-├── aula06/          # Arrays Avançados e Objetos
-│   ├── aula06.md   # Teoria: métodos de array, objetos, classes
-│   ├── Aluno.js    # Exemplo de classe
-│   ├── ex01-02.js  # Exercícios
-│   ├── exAula06-Arrays.js
-│   ├── exAula06-Objetos.js
-│   └── FE07/       # Ficha de exercícios 07
-└── extras/         # Material complementar
+├── aula01/              # Introdução à algoritmia e JavaScript (fundamentos)
+│   ├── aula01.md        # Teoria: algoritmos, variáveis, operadores, tipos
+│   ├── ex01.js..ex07.js # Exercícios básicos (I/O, operações, variáveis)
+│   └── FE01/            # Ficha de exercícios 01 (pseudocódigo e JS)
+├── aula02/              # Operadores e estruturas condicionais
+│   ├── aula02.md        # Operadores relacionais, lógicos, if/else, switch, ternário
+│   └── ex01.js..ex11.js # Exercícios de decisões
+├── aula03/              # Estruturas de repetição (loops)
+│   ├── aula03.md        # while, do...while, for, for...in, for...of
+│   ├── ex01.js..ex05.js # Exercícios com ciclos
+│   ├── FE02/            # Ficha de exercícios 02
+│   └── FE03/            # Ficha de exercícios 03
+├── aula04/              # Funções
+│   ├── aula04.md        # Funções, parâmetros, retorno, arrow, callbacks
+│   ├── callback.js      # Exemplo de callback
+│   ├── ex01.js..ex07.js # Exercícios de funções
+│   └── FE04/            # Ficha de exercícios 04
+├── aula05/              # Arrays
+│   ├── aula05.md        # Arrays, percursos, pesquisa, ordenação
+│   ├── array.js         # Exemplos básicos com arrays
+│   ├── pesquisa.js      # Pesquisa sequencial em arrays
+│   ├── ordenacao.js     # Ordenação por seleção
+│   └── ex01.js..ex03.js # Exercícios com arrays
+├── aula06/              # Arrays avançados, objetos e classes
+│   ├── aula06.md        # Métodos de array, objetos, coleções, classes
+│   ├── Aluno.js         # Exemplo simples de classe
+│   ├── ex01.js..ex02.js # Exercícios da aula 06
+│   ├── exAula06-Arrays.js   # Demonstração de métodos de array
+│   ├── exAula06-Objetos.js  # Demonstração com objetos e listas de objetos
+│   └── FE07/            # Ficha de exercícios 07
+├── extras/              # Material complementar
+│   └── FE08.pdf         # Ficha extra / material adicional
+├── projeto/             # Projeto prático de gestão de seguros (estudo de caso)
+│   ├── enunciado.pdf    # Enunciado do projeto
+│   └── estudoDeCasoGestaoDeSeguros.md # Estudo de caso detalhado (linkado abaixo)
+├── package.json         # Configuração do projeto Node (dependências, scripts)
+├── package-lock.json    # Lockfile do npm
+├── .gitignore           # Arquivos e pastas ignorados pelo Git
+└── README.md            # Este arquivo
 ```
 
 ## Como Usar Este Material
@@ -59,7 +67,7 @@ algoritmia-e-programacao/
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/algoritmia-e-programacao.git
+git clone https://github.com/danielarjordao/algoritmia-e-programacao.git
 cd algoritmia-e-programacao
 ```
 
@@ -68,15 +76,15 @@ cd algoritmia-e-programacao
 npm install
 ```
 
-### Executando os Exemplos
+### Executando os Exemplos das Aulas
 
-Todos os arquivos JavaScript podem ser executados diretamente com Node.js:
+Todos os arquivos JavaScript podem ser executados diretamente com Node.js a partir da raiz do repositório:
 
 ```bash
-# Exemplo: executar exercício 1 da aula 1
+# Exemplo: executar exercício 1 da aula 1 (terminal)
 node aula01/ex01.js
 
-# Exemplo: executar exercício da ficha FE01
+# Exemplo: executar um exercício da ficha FE01
 node aula01/FE01/ex04.js
 ```
 
